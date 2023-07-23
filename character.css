@@ -1,0 +1,187 @@
+:root {
+  --brown-color: #562A1D;
+  --face-color: #E2A56C;
+  --white-color: #fff;
+  --black-color: #1E1E22;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#1946ec, skyblue);
+  background-repeat: no-repeat;
+}
+
+.lesser {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto; 
+  position: relative;
+}
+
+/* 얼굴 */
+.face {
+  width: 372px;
+  height: 341px;
+  border: 1px solid transparent ;
+  border-radius: 372px;
+  background: var(--face-color);
+  margin: 0 auto;
+  /* position: relative; */
+  transform: translateY(50%);
+  z-index: 1;
+}
+
+/* 귀 */
+.ear {
+  width: 130px;
+  height: 90px;
+  border-radius: 100px 100px 0px 0px;
+  background: var(--brown-color);
+}
+.ear.left {
+  transform: rotate(-40deg);
+  position: absolute;
+  top: 40%;
+  left: -3%;
+  z-index: -1;
+}
+.ear.right {
+  transform: rotate(40deg);
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  z-index: -10;
+}
+.earhole {
+  width: 85px;
+  height: 60px;
+  border-radius: 100px 100px 0px 0px;
+  background-color: var(--white-color);
+  transform: rotate(-40deg);
+}
+.ear.left .earhole {
+  transform: translate(27%, 40%);
+}
+.ear.right .earhole {
+  transform: translate(27%, 40%);
+}
+
+/* 눈 그림자 */
+.circle {
+  width: 66px;
+  height: 87px;
+  background-color: var(--brown-color);
+  border-radius: 50%;
+  z-index: 100;
+}
+.circle.left {
+  transform: rotate(-33deg);
+  position: absolute;
+  right: 22%;
+  bottom: 15%;
+}
+.circle.right {
+  transform: rotate(33deg);
+  position: absolute;
+  left: 22%;
+  bottom: 15%;
+}
+
+/* 눈 */
+.eye {
+  width: 44px;
+  height: 44px;
+  background-color: var(--black-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.white-eye {
+  width: 12px;
+  height: 12px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 수염, 코, 입 */
+.beard {
+  width: 175px;
+  height: 138px;
+  background-color: var(--white-color);
+  border: 1px solid var(--white-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 80%;
+  /* bottom: 1%; */
+  left: 50%;
+  transform: translate(-50%);
+}
+.nose {
+  width: 50px;
+  height: 37px;
+  background-color: var(--black-color);
+  border-radius: 50%;
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.mouse {
+  width: 29px;
+  height: 55px;
+  border-radius: 0px 0px 50px 50px;
+  background: #B90B1F;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* 무늬 */
+.small-pattern {
+  width: 33px;
+  height: 33px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  /* border: 1px solid black; */
+}
+.small-pattern.left {
+  position: absolute;
+  left: 33%;
+  bottom: 32%;
+  z-index: 50;
+}
+.small-pattern.right {
+  position: absolute;
+  right: 33%;
+  bottom: 32%;
+  z-index: 50;
+}
+
+.large-pattern {
+  width: 60px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}
+.large-pattern.left {
+  transform: rotate(40deg);
+  position: absolute;
+  left: 10%;
+  bottom: -8%;
+  z-index: 50;
+}
+.large-pattern.right {
+  transform: rotate(-40deg);
+  position: absolute;
+  right: 10%;
+  bottom: -8%;
+  z-index: 50;
+}
